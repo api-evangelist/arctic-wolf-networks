@@ -1,0 +1,36 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.arcticwolf.com/en/developer-and-oem/aurora-multi-tenant-api/aurora-multi-tenant-api
+docs: https://docs.arcticwolf.com/en/developer-and-oem/aurora-multi-tenant-api/aurora-multi-tenant-api/getting-started
+summary:
+  types: [oauth2, http]
+  http_schemes: [bearer]
+  oauth2_flows: [clientCredentials]
+schemes:
+- name: AuroraMultiTenantOAuth
+  type: oauth2
+  flow: clientCredentials
+  description: >-
+    The Aurora Multi-Tenant API authenticates a partner application with the OAuth 2.0
+    client-credentials grant. The Application ID (client id) and Application Secret
+    (client secret) are presented as HTTP Basic Auth to the regional auth endpoint;
+    the request body sets grant_type=client_credentials and scope=api. The response
+    returns { access_token, expires_in, token_type }, and the access_token is then used
+    as the Bearer token on all subsequent API calls.
+  token_url: https://api-admin.cylance.com/public/v2/{region_code}/auth
+  token_url_example: https://api-admin.cylance.com/public/v2/us/auth
+  base_url: https://api-admin.cylance.com/public/v2
+  scopes:
+    api: Access to the Aurora Multi-Tenant / Endpoint Defense API surface.
+  sources: [docs.arcticwolf.com]
+- name: AuroraBearer
+  type: http
+  scheme: bearer
+  description: >-
+    Bearer access token (obtained from the client-credentials auth endpoint) presented
+    on the Authorization header for all Aurora API resource calls.
+  sources: [docs.arcticwolf.com]
+notes: >-
+  Arctic Wolf's Aurora Endpoint Defense / Multi-Tenant API is built on the Cylance
+  (BlackBerry) endpoint platform Arctic Wolf now operates; the auth and base hosts are
+  api-admin.cylance.com. Region codes select the login region (e.g. us).
