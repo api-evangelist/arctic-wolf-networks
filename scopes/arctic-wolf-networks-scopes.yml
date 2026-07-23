@@ -1,0 +1,21 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.arcticwolf.com/en/developer-and-oem/aurora-multi-tenant-api/aurora-multi-tenant-api/getting-started
+docs: https://docs.arcticwolf.com/en/developer-and-oem/aurora-multi-tenant-api/aurora-multi-tenant-api
+schemes:
+- name: AuroraMultiTenantOAuth
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api-admin.cylance.com/public/v2/{region_code}/auth
+scopes:
+- scope: api
+  description: >-
+    The single scope requested on the client-credentials token request
+    (scope=api); grants access to the Aurora Multi-Tenant / Endpoint Defense
+    API resource surface for the authorized partner application.
+  flows: [clientCredentials]
+  sources: [docs.arcticwolf.com]
+notes: >-
+  Arctic Wolf's Aurora API documents a coarse-grained single-scope (api) OAuth
+  client-credentials model rather than fine-grained per-resource scopes;
+  authorization is scoped by the partner application's provisioned tenants.

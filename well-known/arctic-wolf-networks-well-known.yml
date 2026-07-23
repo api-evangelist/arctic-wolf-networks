@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+host: https://arcticwolf.com
+documents:
+- path: /.well-known/security.txt          # RFC 9116
+  status: 200
+  file: arctic-wolf-networks-security.txt
+- path: /.well-known/openid-configuration   # OIDC discovery
+  status: 404
+- path: /.well-known/oauth-authorization-server  # RFC 8414
+  status: 404
+- path: /.well-known/api-catalog             # RFC 9727
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  A provider-published llms.txt is served at https://arcticwolf.com/llms.txt (200,
+  captured verbatim in llms/). docs.arcticwolf.com/.well-known/openid-configuration
+  returns 302 (redirect, not a discovery document). No api.arcticwolf.com host resolves.

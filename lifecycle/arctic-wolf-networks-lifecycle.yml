@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://status.arcticwolf.com/
+versioning:
+  scheme: uri-path
+  current: v2
+  evidence: >-
+    Aurora Multi-Tenant API is documented as version 2.0.0; the base URL carries
+    the version segment (https://api-admin.cylance.com/public/v2).
+status_page: https://status.arcticwolf.com/
+status_page_provider: Atlassian Statuspage
+status_page_regions: [USA, CA, EMEA, APAC]
+deprecation:
+  policy_url: null
+  sunset_header: null
+  evidence: No published API deprecation policy or RFC 8594 Sunset/Deprecation header support found.
+sla:
+  url: null
+notes: >-
+  Arctic Wolf runs a public Atlassian Statuspage covering MDR, Managed Risk / Aurora
+  Vulnerability Management, Aurora Attack Surface Management, Managed Awareness,
+  Aurora Endpoint, Aurora Mobile Threat Defense, and Portal services across four regions.
+  No developer-facing API changelog/release-notes page or deprecation policy was located.

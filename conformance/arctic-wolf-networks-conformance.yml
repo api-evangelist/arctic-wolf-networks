@@ -1,0 +1,47 @@
+generated: '2026-07-18'
+method: searched
+source: https://trust.arcticwolf.com/
+docs: https://docs.arcticwolf.com/en/developer-and-oem/aurora-multi-tenant-api/aurora-multi-tenant-api/getting-started
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    Aurora Multi-Tenant API uses OAuth 2.0 client-credentials grant
+    (grant_type=client_credentials, scope=api) to mint bearer access tokens.
+- id: rfc6750-bearer
+  conforms: true
+  evidence: Access token presented as an Authorization Bearer token on all API calls.
+- id: soc2
+  conforms: true
+  evidence: SOC 2 attestation listed on trust.arcticwolf.com.
+- id: iso27001
+  conforms: true
+  evidence: ISO/IEC 27001 certification listed on trust.arcticwolf.com.
+- id: iso27017
+  conforms: true
+  evidence: ISO/IEC 27017 certification listed on trust.arcticwolf.com.
+- id: iso27018
+  conforms: true
+  evidence: ISO/IEC 27018 certification listed on trust.arcticwolf.com.
+- id: pci-dss
+  conforms: true
+  evidence: PCI DSS listed on trust.arcticwolf.com.
+- id: hipaa
+  conforms: true
+  evidence: HIPAA listed on trust.arcticwolf.com.
+- id: fedramp
+  conforms: true
+  evidence: FedRAMP listed on trust.arcticwolf.com.
+- id: gdpr
+  conforms: true
+  evidence: GDPR posture listed on trust.arcticwolf.com.
+- id: csa-star
+  conforms: true
+  evidence: CSA STAR listed on trust.arcticwolf.com.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No application/problem+json error envelope documented.
+- id: fhir-r4
+  conforms: false
+- id: scim2
+  conforms: false

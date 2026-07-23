@@ -1,22 +1,73 @@
 aid: arctic-wolf-networks
 name: Arctic Wolf Networks
-description: 'Arctic Wolf Networks is a company surfaced as a portfolio company of redpoint-ventures and
-  added to the API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: >-
+  Arctic Wolf Networks is a security operations company delivering 24x7 AI-driven cybersecurity
+  through its Aurora Platform, spanning Managed Detection and Response (MDR), Managed Risk, Managed
+  Security Awareness, Incident Response, and Aurora Endpoint Security. For developers and OEM partners,
+  Arctic Wolf publishes RESTful APIs on docs.arcticwolf.com — the Aurora Multi-Tenant API (2.0.0) for
+  partners managing many customer tenants and the Aurora Endpoint Defense / User API for organizations
+  managing devices, policies, zones, threats, and global lists. The APIs authenticate with an OAuth 2.0
+  client-credentials grant that mints a bearer access token. Arctic Wolf publishes a public trust center
+  (SOC 2, ISO 27001/27017/27018, PCI DSS, HIPAA, FedRAMP, GDPR, CSA STAR) and a coordinated vulnerability
+  disclosure program via security.txt.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://arcticwolf.com/wp-content/uploads/2026/03/AW-Higher-Standard-OG-Image-Dark-2026.jpg
 url: https://raw.githubusercontent.com/api-evangelist/arctic-wolf-networks/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - redpoint-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: portfolio-lead-enriched
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Cybersecurity
-apis: []
+- Security Operations
+- Managed Detection and Response
+- Endpoint Security
+- Threat Detection
+- Incident Response
+apis:
+- name: Aurora Multi-Tenant API
+  description: >-
+    RESTful API (v2.0.0) for Arctic Wolf partner applications managing multiple customer tenants —
+    create a partner application, generate an OAuth client-credentials bearer token, run health checks,
+    and issue tenant-scoped requests. Built on the Cylance endpoint platform Arctic Wolf operates.
+  humanURL: https://docs.arcticwolf.com/en/developer-and-oem/aurora-multi-tenant-api/aurora-multi-tenant-api
+  baseURL: https://api-admin.cylance.com/public/v2
+  properties:
+  - type: Documentation
+    url: https://docs.arcticwolf.com/en/developer-and-oem/aurora-multi-tenant-api/aurora-multi-tenant-api
+  - type: APIReference
+    url: https://docs.arcticwolf.com/bundle/aurora_mtc_api/page/index.html
+  - type: GettingStarted
+    url: https://docs.arcticwolf.com/en/developer-and-oem/aurora-multi-tenant-api/aurora-multi-tenant-api/getting-started
+- name: Aurora Endpoint Defense API
+  description: >-
+    RESTful API for organizations to manage Aurora Endpoint Security resources — Device API, User API,
+    Global List API, Policy API, Zone API, Threat API, and Memory Protection API. Clients request an
+    access token from the Auth endpoint, then call all other endpoints with the returned bearer token.
+  humanURL: https://docs.arcticwolf.com/en/developer-and-oem/aurora-endpoint-defense-api/restful-api
+  baseURL: https://api-admin.cylance.com/public/v2
+  properties:
+  - type: Documentation
+    url: https://docs.arcticwolf.com/en/developer-and-oem/aurora-endpoint-defense-api/device-api
+  - type: APIReference
+    url: https://docs.arcticwolf.com/bundle/Aurora-User-API-guide/page/User_API.html
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +76,54 @@ maintainers:
 common:
 - type: Website
   url: http://arcticwolf.com/
+- type: DeveloperPortal
+  url: https://docs.arcticwolf.com/en/developer-and-oem
+- type: Documentation
+  url: https://docs.arcticwolf.com/en
+- type: APIReference
+  url: https://docs.arcticwolf.com/bundle/aurora_mtc_api/page/index.html
+- type: GettingStarted
+  url: https://docs.arcticwolf.com/en/developer-and-oem/aurora-multi-tenant-api/aurora-multi-tenant-api/getting-started
+- type: Blog
+  url: https://arcticwolf.com/resources/blog/
+- type: Support
+  url: https://arcticwolf.com/company/contact-us/
+- type: GitHubOrganization
+  url: https://github.com/rtkwlf
+- type: SignUp
+  url: https://arcticwolf.com/request-demo/
+- type: TermsOfService
+  url: https://arcticwolf.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://arcticwolf.com/privacy-policy/
+- type: Authentication
+  url: authentication/arctic-wolf-networks-authentication.yml
+- type: OAuthScopes
+  url: scopes/arctic-wolf-networks-scopes.yml
+- type: Conformance
+  url: conformance/arctic-wolf-networks-conformance.yml
+- type: Compliance
+  url: https://trust.arcticwolf.com/
+- type: TrustCenter
+  url: security/arctic-wolf-networks-trust-center.yml
+- type: DomainSecurity
+  url: security/arctic-wolf-networks-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/arctic-wolf-networks-vulnerability-disclosure.yml
+- type: Security
+  url: https://arcticwolf.com/vulnerability-disclosure
+- type: WellKnown
+  url: well-known/arctic-wolf-networks-well-known.yml
+- type: SecurityTxt
+  url: well-known/arctic-wolf-networks-security.txt
+- type: LLMsTxt
+  url: llms/arctic-wolf-networks-llms.txt
+- type: Lifecycle
+  url: lifecycle/arctic-wolf-networks-lifecycle.yml
+- type: StatusPage
+  url: https://status.arcticwolf.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
