@@ -10,6 +10,17 @@ description: >-
   client-credentials grant that mints a bearer access token. Arctic Wolf publishes a public trust center
   (SOC 2, ISO 27001/27017/27018, PCI DSS, HIPAA, FedRAMP, GDPR, CSA STAR) and a coordinated vulnerability
   disclosure program via security.txt.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
